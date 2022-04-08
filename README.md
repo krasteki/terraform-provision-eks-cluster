@@ -121,3 +121,7 @@ In another terminal (do not close the `kubectl proxy` process), create the `Clus
 ```
 $ kubectl apply -f https://raw.githubusercontent.com/krasteki/terraform-provision-eks-cluster/main/kubernetes-dashboard-admin.rbac.yaml
 ```
+Generate the authorization token:
+```
+$ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep service-controller-token | awk '{print $1}')
+```
