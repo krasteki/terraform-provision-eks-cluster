@@ -1,4 +1,4 @@
-#The purpose of this repository is to deploy an EKS cluster using Terraform. `kubectl` used Terraform output to deploy a Kubernetes dashboard on the cluster.
+# The purpose of this repository is to deploy an EKS cluster using Terraform. `kubectl` used Terraform output to deploy a Kubernetes dashboard on the cluster.
 
 [HashiCorp Learn Guide](https://learn.hashicorp.com/tutorials/terraform/eks?in=terraform/kubernetes)
 
@@ -7,7 +7,7 @@ The Amazon Elastic Kubernetes Service (EKS) is the AWS service for deploying, ma
 ***Warning! AWS charges $0.10 per hour for each EKS cluster. 
 
 
-#Prerequisites
+# Prerequisites
 
 1. an [AWS account](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fportal.aws.amazon.com%2Fbilling%2Fsignup%2Fresume&client_id=signup&code_challenge_method=SHA-256&code_challenge=_lZzlGtCepKXO4raf3pqyiG4Ju41ZrDE1dlZYkzRzBw#/start) with the IAM permissions listed on the [EKS module documentation](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest)
 
@@ -55,7 +55,7 @@ $ choco install wget
 6. [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) -version used 
 
 
-#Set up and initialize your Terraform workspace
+# Set up and initialize your Terraform workspace
 clone the repo:
 ```
 $ git clone https://github.com/krasteki/terraform-provision-eks-cluster.git
@@ -119,5 +119,5 @@ To use the Kubernetes dashboard, you need to create a `ClusterRoleBinding` and p
 
 In another terminal (do not close the `kubectl proxy` process), create the `ClusterRoleBinding` resource.
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/hashicorp/learn-terraform-provision-eks-cluster/main/kubernetes-dashboard-admin.rbac.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/krasteki/terraform-provision-eks-cluster/main/kubernetes-dashboard-admin.rbac.yaml
 ```
